@@ -32,6 +32,11 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <!-- Content -->
+    <ListView
+        android:id="@+id/list_view_starters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

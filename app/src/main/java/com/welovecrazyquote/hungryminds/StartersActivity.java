@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
@@ -28,5 +29,6 @@ public class StartersActivity extends AppCompatActivity {
                 getOnBackPressedDispatcher().onBackPressed();
             }
         });
+        ListView startersList = findViewById(R.id.list_view_starters);
     }
 }

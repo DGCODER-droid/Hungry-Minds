@@ -31,6 +31,11 @@ public class StartersActivity extends AppCompatActivity {
             }
         });
         ListView startersList = findViewById(R.id.list_view_starters);
+        Dish dishOne = new Dish("Mushroom and tofu maki","jhcjascvhjhasdvc ascgagciugciadscsdcsd",999);
+        dishOne.title = "Mushroom and tofu maki";
+        dishOne.description = "jhcjascvhjhasdvc ascgagciugciadscsdcsd";
+        dishOne.price = 999;
+
         String[] dishes = {
                 "Mushroom and tofu maki",
                 "Egg and avocado uramaki",

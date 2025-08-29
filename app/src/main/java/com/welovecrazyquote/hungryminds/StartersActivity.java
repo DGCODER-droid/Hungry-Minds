@@ -31,35 +31,28 @@ public class StartersActivity extends AppCompatActivity {
             }
         });
         ListView startersList = findViewById(R.id.list_view_starters);
-        Dish dishOne = new Dish("Mushroom and tofu maki","jhcjascvhjhasdvc ascgagciugciadscsdcsd",999);
-        dishOne.title = "Mushroom and tofu maki";
-        dishOne.description = "jhcjascvhjhasdvc ascgagciugciadscsdcsd";
-        dishOne.price = 999;
 
-        String[] dishes = {
-                "Mushroom and tofu maki",
-                "Egg and avocado uramaki",
-                "Melon and lemon soup",
-                "Coconut and chocolate mousse",
-                "Spinach and cabbage wontons",
-                "Broccoli and cucumber soup",
-                "Chilli and aubergine dip",
-                "Chickpea and chilli gyoza",
-                "Sprout and pineapple soup",
-                "Egusi and borscht soup",
-                "Aubergine and egg sushi",
-                "Artichoke and mustard soup",
-                "Peppercorn and tamarind soup",
-                "Parsley and celeriac parcels",
-                "Pasta and broccoli soup",
-                "Potato and courgette soup",
-                "Chickpea and cabbage parcels",
-                "Coriander and peppercorn gyoza",
-                "Pear and chestnut soup",
-                "Pesto and garam masala parcels"
+
+        Dish[] dishes = {
+                new Dish(
+                        "Mushroom and tofu maki",
+                        "Delicate sushi rolls filled with marinated tofu and earthy mushrooms, wrapped in seasoned rice and nori for a light yet satisfying bite.",
+                        999
+                ),
+                new Dish(
+                        "Egg and avocado uramaki",
+                        "A fresh inside-out sushi roll featuring creamy avocado and soft-cooked egg, topped with sesame seeds for extra flavor and texture.",
+                        800
+                ),
+                new Dish(
+                        "Melon and lemon soup",
+                        "A refreshing chilled soup made with sweet melon and zesty lemon, perfect as a light and vibrant appetizer or palate cleanser.",
+                        2000
+                )
+
         };
 
-        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,dishes);
+        ArrayAdapter<Dish> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
         startersList.setAdapter(dishesAdapter);
     }
 }

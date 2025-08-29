@@ -31,5 +31,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startersActivityIntent);
             }
         });
+
+        mainsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainCoursesActivityIntent = new Intent(MainActivity.this,MainCoursesActivity.class);
+                startActivity(mainCoursesActivityIntent);            }
+        });
     }
 }

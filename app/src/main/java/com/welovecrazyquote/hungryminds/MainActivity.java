@@ -1,8 +1,10 @@
 package com.welovecrazyquote.hungryminds;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent mainCoursesActivityIntent = new Intent(MainActivity.this,MainCoursesActivity.class);
                 startActivity(mainCoursesActivityIntent);            }
+        });
+
+        TextView emailTextView = findViewById(R.id.text_view_email_address);
+        emailTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent launchEmailAppIntent = new Intent(Intent.ACTION_SENDTO);
+                launchEmailAppIntent.setData(Uri.parse("mailto:thehungryminds@gurung.com"));
+                startActivity(launchEmailAppIntent);
+            }
         });
     }
 }

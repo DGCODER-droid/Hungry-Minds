@@ -16,6 +16,17 @@
             android:name=".StartersActivity"
             android:label="Starters"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DessertsActivity"
+            android:label="Desserts"
+            android:parentActivityName=".MainActivity">
+
+            <!-- This makes sure older versions support Up navigation -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity android:name=".MainCoursesActivity"
             android:label="Main Courses"
             android:parentActivityName=".MainActivity"/>

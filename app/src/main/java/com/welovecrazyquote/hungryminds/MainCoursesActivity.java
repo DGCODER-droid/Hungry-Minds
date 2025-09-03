@@ -1,18 +1,27 @@
 package com.welovecrazyquote.hungryminds;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainCoursesActivity extends AppCompatActivity {
+    ImageView backbutton;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_courses);
-
+        backbutton = findViewById(R.id.main_backButton);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
         ListView mainCoursesList = findViewById(R.id.list_view_main_courses);
         Dish[] mainCourses = {
                 new Dish("Black pepper", "Hot vindalooo", 7888),
